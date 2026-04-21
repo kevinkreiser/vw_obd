@@ -1,0 +1,26 @@
+[project]
+name = "vw-obd"
+version = "0.1.0"
+description = "OBD-II diagnostics and fuel pump monitor for VW Atlas 2018"
+requires-python = ">=3.9"
+dependencies = [
+    "can-isotp>=2",
+    "python-can>=4.6.1",
+]
+
+[project.scripts]
+dump-codes = "vw_obd.dump_codes:main"
+fuel-monitor = "vw_obd.fuel_pump_monitor:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = []
+# Use public PyPI so private registry indexes in the environment don't break resolution.
+# Remove or adjust if your org requires a private index.
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true

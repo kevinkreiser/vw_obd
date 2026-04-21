@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# uv / virtualenv
+.venv/
+
+# uv lockfile is intentionally tracked (uv.lock)
+# .venv is not
